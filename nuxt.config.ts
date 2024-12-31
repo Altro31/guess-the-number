@@ -2,5 +2,11 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@prisma/nuxt']
+  future: { compatibilityVersion: 4 },
+  modules: ['@nuxtjs/tailwindcss', '@prisma/nuxt'],
+  tailwindcss: { viewer: false },
+  nitro: { experimental: { websocket: true } },
+  prisma: {
+    installClient: false
+  }
 })
